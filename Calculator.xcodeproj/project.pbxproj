@@ -12,6 +12,9 @@
 		4BD892532C1209A500B66966 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD892522C1209A500B66966 /* Preview Assets.xcassets */; };
 		4BD8925D2C120A0E00B66966 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD8925C2C120A0E00B66966 /* MainView.swift */; };
 		4BD8925F2C120A3900B66966 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD8925E2C120A3900B66966 /* Model.swift */; };
+		4BD892622C120E3000B66966 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD892612C120E3000B66966 /* BackgroundView.swift */; };
+		4BD892652C121F3700B66966 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD892642C121F3700B66966 /* ColorExtensions.swift */; };
+		4BD892672C12365C00B66966 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD892662C12365C00B66966 /* ButtonsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		4BD892522C1209A500B66966 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4BD8925C2C120A0E00B66966 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4BD8925E2C120A3900B66966 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4BD892612C120E3000B66966 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		4BD892642C121F3700B66966 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		4BD892662C12365C00B66966 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +60,12 @@
 			isa = PBXGroup;
 			children = (
 				4BD8924B2C1209A400B66966 /* CalculatorApp.swift */,
+				4BD892602C120E1600B66966 /* Components */,
 				4BD8925B2C1209DC00B66966 /* View */,
 				4BD8925A2C1209D400B66966 /* ViewModel */,
 				4BD892592C1209CD00B66966 /* Model */,
 				4BD8924F2C1209A500B66966 /* Assets.xcassets */,
+				4BD892632C121F1A00B66966 /* Extensions */,
 				4BD892512C1209A500B66966 /* Preview Content */,
 			);
 			path = Calculator;
@@ -92,6 +100,23 @@
 				4BD8925C2C120A0E00B66966 /* MainView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4BD892602C120E1600B66966 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4BD892612C120E3000B66966 /* BackgroundView.swift */,
+				4BD892662C12365C00B66966 /* ButtonsView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4BD892632C121F1A00B66966 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4BD892642C121F3700B66966 /* ColorExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,8 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BD892672C12365C00B66966 /* ButtonsView.swift in Sources */,
 				4BD8925F2C120A3900B66966 /* Model.swift in Sources */,
+				4BD892652C121F3700B66966 /* ColorExtensions.swift in Sources */,
 				4BD8925D2C120A0E00B66966 /* MainView.swift in Sources */,
+				4BD892622C120E3000B66966 /* BackgroundView.swift in Sources */,
 				4BD8924C2C1209A400B66966 /* CalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,13 +328,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = QT3T249ZHN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,9 +343,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = master.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -328,13 +361,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = QT3T249ZHN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,9 +376,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = master.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

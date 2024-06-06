@@ -5,7 +5,7 @@
 //  Created by Vlad on 6/6/24.
 //
 
-import Foundation
+import SwiftUI
 
 enum Buttons: String {
     case zero = "0"
@@ -23,8 +23,28 @@ enum Buttons: String {
     case multiple = "x"
     case divide = "/"
     case equal = "="
-    case decimal = ","
+    case decimal = "."
     case percent = "%"
     case negative = "+/-"
-    case clear = "AC"
+    case clear = "AC" 
+    
+    var buttonColor: Color {
+        switch self {
+        case .clear, .negative, .percent:
+            return Color.CalcTurquoise
+        case .divide, .multiple, .minus, .plus, .equal:
+            return Color.CalcPeriwinkle
+        default:
+            return Color.CalcIndigo
+        }
+    }
+    
+    var buttonFontColor: Color {
+        switch self {
+        case .clear, .negative, .percent:
+            return Color.CalcIndigo
+        default:
+            return Color.white
+        }
+    }
 }
