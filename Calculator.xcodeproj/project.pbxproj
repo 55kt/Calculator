@@ -15,6 +15,7 @@
 		4BD892622C120E3000B66966 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD892612C120E3000B66966 /* BackgroundView.swift */; };
 		4BD892652C121F3700B66966 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD892642C121F3700B66966 /* ColorExtensions.swift */; };
 		4BD892672C12365C00B66966 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD892662C12365C00B66966 /* ButtonsView.swift */; };
+		4BD892692C137A5500B66966 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD892682C137A5500B66966 /* ButtonExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4BD892612C120E3000B66966 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		4BD892642C121F3700B66966 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		4BD892662C12365C00B66966 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		4BD892682C137A5500B66966 /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				4BD892642C121F3700B66966 /* ColorExtensions.swift */,
+				4BD892682C137A5500B66966 /* ButtonExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BD892692C137A5500B66966 /* ButtonExtension.swift in Sources */,
 				4BD892672C12365C00B66966 /* ButtonsView.swift in Sources */,
 				4BD8925F2C120A3900B66966 /* Model.swift in Sources */,
 				4BD892652C121F3700B66966 /* ColorExtensions.swift in Sources */,

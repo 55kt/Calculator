@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+enum Operation {
+    case addition, subtract, multiply, divide, none
+}
+
 enum Buttons: String {
     case zero = "0"
     case one = "1"
