@@ -11,8 +11,10 @@ class ViewModel: ObservableObject {
     
     //MARK: - Properties
     @Published var value = "0"
+    @Published var lastEnteredValue: String = ""
     @Published var number: Double = 0.0
     @Published var currentOperation: Operation = .none
+    @Published var isEnteringNewNumber: Bool = false
     
     //Massive
     let buttonsArray: [[Buttons]] = [
@@ -60,18 +62,26 @@ class ViewModel: ObservableObject {
             
         case .plus, .minus, .multiple, .divide:
             currentOperation = item.buttonToOperation()
-            number = Double(value) ?? 0
-            value = "0"
+            if let currentValue = Double(value) {
+                number = currentValue
+                lastEnteredValue = value
+            }
+            isEnteringNewNumber = true
             
         case .equal:
             if let currentValue = Double(value) {
                value = formatResult(performOperation(currentValue))
             }
+            isEnteringNewNumber = true
             
         case .decimal:
-            if !value.contains(".") {
+            if isEnteringNewNumber {
+                value = "0."
+                isEnteringNewNumber = false
+            } else if !value.contains(".") {
                 value += "."
             }
+            
             
         case .percent:
             if let currentValue = Double(value) {
@@ -87,11 +97,17 @@ class ViewModel: ObservableObject {
             value = "0"
             
         default:
-            if value == "0" {
+            if isEnteringNewNumber {
                 value = item.rawValue
+                isEnteringNewNumber = false
             } else {
-                value += item.rawValue
+                if value == "0" {
+                    value = item.rawValue
+                } else {
+                    value += item.rawValue
+                }
             }
+            lastEnteredValue = value
         }
     }
     
